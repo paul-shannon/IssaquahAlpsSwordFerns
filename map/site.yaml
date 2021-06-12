@@ -1,0 +1,21 @@
+site: Issaquah Alps Sword Fern Decline
+date: 2021-06-12
+title: Magnficent Forest - Damage and Repair 
+centerLon: -121.956570
+centerLat: 47.501663
+initialZoom: 12
+
+
+points:
+
+  - name: fake
+    id: id_001
+    observer: Kramer Canup
+    group: kramer photos
+    date: 2020-08-12
+    lat: 47.508120
+    lon: -121.955910
+    color: red
+    radius: 20
+    details: http://pshannon.net/sewardParkRestoration/salalDecline_001
+
