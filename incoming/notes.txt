@@ -1,5 +1,5 @@
 *----------------------------------------------------------------------------------------------------
-original.jpg?1619387608
+001: original.jpg?1619387608
 Lat: 47.51306Lon: -121.9717
 Photo taken facing 218* SW
 
@@ -8,45 +8,47 @@ trail. Ferns were growing onto of bed rock or a large boulder with
 very shallow soils. Soil was very rocky and filled with baseball sized
 rocks.
 *----------------------------------------------------------------------------------------------------
-original.jpg?1618934810
-Lat: 47.520357Lon: -122.01188Accuracy: 22m
+002: original.jpg?1618934810
+Lat: 47.520357
+Lon: -122.01188
+Accuracy: 22m
 33 degrees facing NE
 
 
 *----------------------------------------------------------------------------------------------------
-original.jpg?1618934750
+003: original.jpg?1618934750
 20 degrees facing N
-Lat: 47.527111Lon: -122.003873Accuracy: 22m
+lat: 47.527111
+lon: -122.003873
+Accuracy: 22m
 *----------------------------------------------------------------------------------------------------
-original.jpg?1554165824
-Lat: 47.527958Lon: -121.989537Accuracy: 5m
+004: original.jpg?1554165824
+lat: 47.527958
+lon: -121.989537
+accuracy: 5m
 
 *----------------------------------------------------------------------------------------------------
-original.jpg?1619386083
+005: original.jpg?1619386083
 Photo taken facing 315* NW
 Elevation 650'
-Lat: 47.53028Lon: -121.9744Accuracy: Not recorded
+lat: 47.53028
+lon: -121.9744
+Accuracy: Not recorded
 *----------------------------------------------------------------------------------------------------
-original.jpg?1619386876
+006: original.jpg?1619386876
 Photo taken facing 104* E
 Photo contains a group of ferns showing early signs of decline,
 amongst a sea of healthy lush ferns.
-Lat: 47.52583Lon: -121.9747Accuracy: Not recorded
+lat: 47.52583
+lon: -121.9747
+Accuracy: Not recorded
 
 *----------------------------------------------------------------------------------------------------
-original.jpg?1619387608
-Photo taken facing 218* SW
-
-Many stressed and dead ferns growing on a steep slope above
-trail. Ferns were growing onto of bed rock or a large boulder with
-very shallow soils. Soil was very rocky and filled with baseball sized
-rocks.
-Lat: 47.51306Lon: -121.9717Accuracy: Not recorded
-
-*----------------------------------------------------------------------------------------------------
-original.jpg?1619387336
+007: original.jpg?1619387336
 Photo taken facing 233* SW
-Lat: 47.51306Lon: -121.9714 Accuracy: not recorded
+lat: 47.51306
+lon: -121.9714
+Accuracy: not recorded
 
 *----------------------------------------------------------------------------------------------------
 *----------------------------------------------------------------------------------------------------
