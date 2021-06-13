@@ -18,8 +18,9 @@ if(Sys.getenv("localConfig") == "TRUE"){
    tracks.yaml.file <- "tracks.yaml"
 } else {
    localConfig <- FALSE
-   config.file <- "https://pshannon.net/sewardParkRestoration/config/site.yaml"
-   regions.yaml.file <- "https://pshannon.net/sewardParkRestoration/config/regions.yaml"
+   config.file <-       "https://pshannon.net/issaquahAlpsFernDecline/config/site.yaml"
+   regions.yaml.file <- "https://pshannon.net/issaquahAlpsFernDecline/config/regions.yaml"
+   tracks.yaml.file <-  "https://pshannon.net/issaquahAlpsFernDecline/config/tracks.yaml"
    }
 
 printf("---         localConfig? %s",  localConfig)
@@ -335,7 +336,8 @@ MapApp = R6Class("MapAppClass",
     ) # class
 #----------------------------------------------------------------------------------------------------
 deploy <- function(){
-  deployApp(account="paulshannon", appName="sewardMap", appFiles=c("app.R", "site.yaml", "regions.yaml"))
+    deployApp(account="paulshannon", appName="issaquahAlpsMap",
+              appFiles=c("app.R", "site.yaml", "regions.yaml", "tracks.yaml"))
   }
 
 app <- MapApp$new()
