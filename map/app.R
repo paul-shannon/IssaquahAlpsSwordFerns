@@ -45,6 +45,7 @@ MapApp = R6Class("MapAppClass",
         centerLon = NULL,
         centerLat = NULL,
         initialZoom = NULL,
+        initialGroups = NULL,
         featureGroups = NULL,
 
         readConfigurationAndMarkers = function(filename){
@@ -59,6 +60,9 @@ MapApp = R6Class("MapAppClass",
            private$centerLon <- config$centerLon
            private$centerLat <- config$centerLat
            private$initialZoom <- config$initialZoom
+           private$initialGroups <- config$initialGroups
+           printf("-------- initial groups")
+           print(private$initialGroups)
            },
 
         extractRegionsTable = function(regions.yaml.file){
@@ -160,13 +164,13 @@ MapApp = R6Class("MapAppClass",
 
           if(is.data.frame(private$tbl.tracks)){
             for(r in seq_len(nrow(private$tbl.tracks))){
-               printf("--- track %d", r)
+               #printf("--- track %d", r)
                lon.vec <- private$tbl.tracks$lon[r][[1]]
                lat.vec <- private$tbl.tracks$lat[r][[1]]
-               print(head(lon.vec))
-               print(head(lat.vec))
+               #print(head(lon.vec))
+               #print(head(lat.vec))
                group <- private$tbl.tracks$group[r]
-               id <- sprintf("foo.%d", r)
+               id <- sprintf("track.%d", r)
                color <- private$tbl.tracks$color[r]
                private$map <- addPolylines(private$map,
                                            lng=lon.vec,
@@ -190,7 +194,7 @@ MapApp = R6Class("MapAppClass",
                    br(), br(),
                    checkboxGroupInput("groupsSelector", "Or Select One or More:",
                                       choices=private$featureGroups,
-                                      selected=character(0)),
+                                      selected=private$initialGroups), # character(0)),
                    br(), br(), br(),
                    actionButton("fullViewButton", "Full Map"),
                    width=2
@@ -223,11 +227,11 @@ MapApp = R6Class("MapAppClass",
                      <li>The <font color='blue'>Site Details</font> tab displays site-specific information.
                      <li>User your mouse to pan (click &amp; drag) and zoom (mouse wheel).
                      </ul>"),
-                style="font-size: 24px; width: 900px;"),
+                style="font-size: 20px; width: 900px;"),
             easyClose = TRUE,
             )
 
-         # showModal(query_modal)
+         showModal(query_modal)
 
          observe({  # with no reactive values included here, this seems to run only at startup.
             printf("--- starting up, search term?")
@@ -245,8 +249,9 @@ MapApp = R6Class("MapAppClass",
                  isolate({setView(private$proxy, lon, lat, zoom=18)})
                  } # nrow
               } # nchar
-            updateCheckboxGroupInput(session, "groupsSelector", selected=character(0))
+            updateCheckboxGroupInput(session, "groupsSelector", selected=private$initialGroups)
             hideGroup(private$proxy, private$featureGroups)
+            showGroup(private$proxy, private$initialGroups)
             })
 
          observe({
@@ -255,14 +260,16 @@ MapApp = R6Class("MapAppClass",
             printf("--- map_marker_click: %s", event$id)
             lat <- event$lat
             lon <- event$lng
-            details.url <- subset(private$tbl, name==event$id)$details
-            if(nchar(details.url) > 20){
-                removeUI("#temporaryDiv")
-                insertUI("#foo", "beforeEnd", div(id="temporaryDiv"))
-                insertUI("#temporaryDiv", "beforeEnd",
-                         div(id="detailsDiv", includeHTML(details.url)))
-                updateTabsetPanel(session, "mapTabs", selected="siteDetailsTab")    # provided by shiny
-                }
+            if(event$id %in% private$tbl$name){
+               details.url <- subset(private$tbl, name==event$id)$details
+               if(nchar(details.url) > 20){
+                  removeUI("#temporaryDiv")
+                  insertUI("#foo", "beforeEnd", div(id="temporaryDiv"))
+                  insertUI("#temporaryDiv", "beforeEnd",
+                           div(id="detailsDiv", includeHTML(details.url)))
+                  updateTabsetPanel(session, "mapTabs", selected="siteDetailsTab")    # provided by shiny
+                  } # if url
+               } # if event id recognized
             }) # map
 
          observe({
@@ -274,14 +281,16 @@ MapApp = R6Class("MapAppClass",
             lat <- event$lat
             lon <- event$lng
             print(private$tbl.regions)
-            details.url <- subset(private$tbl.regions, id==event$id)$details
-            if(nchar(details.url) > 20){
-                removeUI("#temporaryDiv")
-                insertUI("#foo", "beforeEnd", div(id="temporaryDiv"))
-                insertUI("#temporaryDiv", "beforeEnd",
-                         div(id="detailsDiv", includeHTML(details.url)))
-                updateTabsetPanel(session, "mapTabs", selected="siteDetailsTab")    # provided by shiny
-                }
+            if(event$id %in% private$tbl.regions$id){
+               details.url <- subset(private$tbl.regions, id==event$id)$details
+               if(nchar(details.url) > 20){
+                   removeUI("#temporaryDiv")
+                   insertUI("#foo", "beforeEnd", div(id="temporaryDiv"))
+                   insertUI("#temporaryDiv", "beforeEnd",
+                            div(id="detailsDiv", includeHTML(details.url)))
+                   updateTabsetPanel(session, "mapTabs", selected="siteDetailsTab")    # provided by shiny
+                   } # if url
+                } # if id recognized
             })
 
          observeEvent(input$selectAllCategoriesButton, ignoreInit=TRUE, {

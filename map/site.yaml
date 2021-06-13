@@ -4,18 +4,84 @@ title: Magnficent Forest - Damage and Repair
 centerLon: -121.956570
 centerLat: 47.501663
 initialZoom: 12
-
+initialGroups: ["Kramer Canup Photos"]
 
 points:
 
-  - name: fake
-    id: id_001
+  - name: Tiger Mountain Trail 02
+    id: issaquahAlps.001
     observer: Kramer Canup
-    group: kramer photos
-    date: 2020-08-12
-    lat: 47.508120
-    lon: -121.955910
-    color: red
-    radius: 20
-    details: http://pshannon.net/sewardParkRestoration/salalDecline_001
+    group: Kramer Canup Photos
+    date: 2021-04-23
+    lat: 47.51306
+    lon: -121.9717
+    color: brown
+    radius: 5
+    details: http://pshannon.net/sewardParkRestoration/issaquahAlps.001
+
+  - name: Poo-Poo Point Trail 01
+    id: issaquahAlps.002
+    observer: Kramer Canup
+    group: Kramer Canup Photos
+    date: 2021-04-23
+    lat: 47.520357
+    lon: -122.01188
+    color: brown
+    radius: 5
+    details: http://pshannon.net/sewardParkRestoration/issaquahAlps.002
+
+  - name: Around the Lake Trail 01
+    id: issaquahAlps.003
+    observer: Kramer Canup
+    group: Kramer Canup Photos
+    date: 2021-04-23
+    lat: 47.527111
+    lon: -122.003873
+    color: brown
+    radius: 5
+    details: http://pshannon.net/sewardParkRestoration/issaquahAlps.003
+
+  - name: Tiger Mountain Trail 01
+    id: issaquahAlps.004
+    observer: Kramer Canup
+    group: Kramer Canup Photos
+    date: 2021-04-23
+    lat: 47.527958
+    lon: -121.989537
+    color: brown
+    radius: 5
+    details: http://pshannon.net/sewardParkRestoration/issaquahAlps.004
+
+  - name:  High Point Trail 01
+    id: issaquahAlps.005
+    observer: Kramer Canup
+    group: Kramer Canup Photos
+    date: 2021-04-23
+    lat: 47.53028
+    lon: -121.9744
+    color: brown
+    radius: 5
+    details: http://pshannon.net/sewardParkRestoration/issaquahAlps.005
+
+  - name: High Point Trail 02
+    id: issaquahAlps.006
+    observer: Kramer Canup
+    group: Kramer Canup Photos
+    date: 2021-04-23
+    lat: 47.52583
+    lon: -121.9747
+    color: brown
+    radius: 5
+    details: http://pshannon.net/sewardParkRestoration/issaquahAlps.006
+
+  - name: Tiger Mountain Trail 03
+    id: issaquahAlps.007
+    observer: Kramer Canup
+    group: Kramer Canup Photos
+    date: 2021-04-23
+    lat: 47.51306
+    lon: -121.9714
+    color: brown
+    radius: 5
+    details: http://pshannon.net/sewardParkRestoration/issaquahAlps.007
 
