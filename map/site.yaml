@@ -4,14 +4,14 @@ title: Magnficent Forest - Damage and Repair
 centerLon: -121.956570
 centerLat: 47.501663
 initialZoom: 12
-initialGroups: ["Kramer Canup Photos"]
+initialGroups: ["Sites"]
 
 points:
 
   - name: Tiger Mountain Trail 02
     id: issaquahAlps.001
     observer: Kramer Canup
-    group: Kramer Canup Photos
+    group: Sites
     date: 2021-04-23
     lat: 47.51306
     lon: -121.9717
@@ -22,7 +22,7 @@ points:
   - name: Poo-Poo Point Trail 01
     id: issaquahAlps.002
     observer: Kramer Canup
-    group: Kramer Canup Photos
+    group: Sites
     date: 2021-04-23
     lat: 47.520357
     lon: -122.01188
@@ -33,7 +33,7 @@ points:
   - name: Around the Lake Trail 01
     id: issaquahAlps.003
     observer: Kramer Canup
-    group: Kramer Canup Photos
+    group: Sites
     date: 2021-04-23
     lat: 47.527111
     lon: -122.003873
@@ -44,7 +44,7 @@ points:
   - name: Tiger Mountain Trail 01
     id: issaquahAlps.004
     observer: Kramer Canup
-    group: Kramer Canup Photos
+    group: Sites
     date: 2021-04-23
     lat: 47.527958
     lon: -121.989537
@@ -55,7 +55,7 @@ points:
   - name:  High Point Trail 01
     id: issaquahAlps.005
     observer: Kramer Canup
-    group: Kramer Canup Photos
+    group: Sites
     date: 2021-04-23
     lat: 47.53028
     lon: -121.9744
@@ -66,7 +66,7 @@ points:
   - name: High Point Trail 02
     id: issaquahAlps.006
     observer: Kramer Canup
-    group: Kramer Canup Photos
+    group: Sites
     date: 2021-04-23
     lat: 47.52583
     lon: -121.9747
@@ -77,7 +77,7 @@ points:
   - name: Tiger Mountain Trail 03
     id: issaquahAlps.007
     observer: Kramer Canup
-    group: Kramer Canup Photos
+    group: Sites
     date: 2021-04-23
     lat: 47.51306
     lon: -121.9714
